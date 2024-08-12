@@ -1,0 +1,27 @@
+.open-sans-normal {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+
+body {
+  font-family: sans-serif;
+  font-size: 16px;
+}
+
+.semi {
+  font-weight: 600;
+}
+.bold {
+  font-weight: 700;
+}
+
+.show-pdf {
+  display: flex !important;
+}
+
+.hide-pdf {
+  display: none !important;
+}

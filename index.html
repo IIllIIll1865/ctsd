@@ -1,1 +1,2704 @@
-index
+<!DOCTYPE html>
+<html translate="no" lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <title>ETS Global BV Certificate</title>
+  <meta name="description"
+    content="This certificate was issued through the BCdiploma services and certified on the blockchain.">
+  <link rel="icon" href="/favicon-global.png">
+  <meta name="google" content="notranslate">
+  <meta name="robots" content="noindex, nofollow">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="stylesheet" href="/index.css">
+  <link rel="stylesheet" href="/indexx.css">
+  <link rel="stylesheet" href="/themify-icons.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+    rel="stylesheet">
+  <script src="/main.js"></script>
+  <style>
+    body {
+      /* visibility: hidden; */
+    }
+  </style>
+  <script>
+    /*  setTimeout(() => {
+       document.body.style.visibility = 'visible';
+     }, 1000); */
+  </script>
+  <style>
+    .ps {
+      -ms-overflow-style: none;
+      touch-action: auto;
+      -ms-touch-action: auto
+    }
+
+    .ps__rail-x {
+      display: none;
+      opacity: 0;
+      transition: background-color .2s linear, opacity .2s linear;
+      -webkit-transition: background-color .2s linear, opacity .2s linear;
+      height: 15px;
+      bottom: 0;
+      position: absolute
+    }
+
+    .ps__rail-y {
+      display: none;
+      opacity: 0;
+      transition: background-color .2s linear, opacity .2s linear;
+      -webkit-transition: background-color .2s linear, opacity .2s linear;
+      width: 15px;
+      right: 0;
+      position: absolute
+    }
+
+    .ps--active-x>.ps__rail-x,
+    .ps--active-y>.ps__rail-y {
+      display: block;
+      background-color: transparent
+    }
+
+    .ps:hover>.ps__rail-x,
+    .ps:hover>.ps__rail-y,
+    .ps--focus>.ps__rail-x,
+    .ps--focus>.ps__rail-y,
+    .ps--scrolling-x>.ps__rail-x,
+    .ps--scrolling-y>.ps__rail-y {
+      opacity: .6
+    }
+
+    .ps .ps__rail-x:hover,
+    .ps .ps__rail-y:hover,
+    .ps .ps__rail-x:focus,
+    .ps .ps__rail-y:focus,
+    .ps .ps__rail-x.ps--clicking,
+    .ps .ps__rail-y.ps--clicking {
+      background-color: #eee;
+      opacity: .9
+    }
+
+    .ps__thumb-x {
+      background-color: transparent;
+      border-radius: 6px;
+      transition: background-color .2s linear, height .2s ease-in-out;
+      -webkit-transition: background-color .2s linear, height .2s ease-in-out;
+      height: 6px;
+      bottom: 2px;
+      position: absolute
+    }
+
+    .ps__thumb-y {
+      background-color: #aaa;
+      border-radius: 6px;
+      transition: background-color .2s linear, width .2s ease-in-out;
+      -webkit-transition: background-color .2s linear, width .2s ease-in-out;
+      width: 6px;
+      right: 2px;
+      position: absolute
+    }
+
+    .ps__rail-x:hover>.ps__thumb-x,
+    .ps__rail-x:focus>.ps__thumb-x,
+    .ps__rail-x.ps--clicking .ps__thumb-x {
+      background-color: #999;
+      height: 11px
+    }
+
+    .ps__rail-y:hover>.ps__thumb-y,
+    .ps__rail-y:focus>.ps__thumb-y,
+    .ps__rail-y.ps--clicking .ps__thumb-y {
+      background-color: #999;
+      width: 11px
+    }
+
+    @supports (-ms-overflow-style: none) {
+      .ps {
+        overflow: auto !important
+      }
+    }
+
+    @media screen and (-ms-high-contrast: active),
+    (-ms-high-contrast: none) {
+      .ps {
+        overflow: auto !important
+      }
+    }
+
+    .ps-container {
+      position: relative
+    }
+
+    .certificat-main {
+      display: flex !important;
+      flex-direction: row-reverse;
+      transition: all .33s ease
+    }
+
+    @media print {
+      .certificat-main>* {
+        display: none
+      }
+
+      .certificat-main:before {
+        content: "This page is not printable, if you want to print your Digital score report,\aplease download the PDF version before";
+        padding: 2em;
+        white-space: pre;
+        position: absolute;
+        font-size: 1.4rem;
+        text-align: center;
+        color: #004277;
+        font-style: italic;
+        font-weight: 700;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh
+      }
+    }
+
+    body[data-v-6d3a06cd]::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3)
+    }
+
+    body[data-v-6d3a06cd]::-webkit-scrollbar-thumb {
+      background-color: #a9a9a9;
+      outline: 1px solid slategrey
+    }
+
+    .qr-code[data-v-6d3a06cd] {
+      display: none
+    }
+
+    .certificat-face[data-v-6d3a06cd] {
+      background: url(/ng.jpg) no-repeat center center !important;
+      background-size: cover !important
+    }
+
+    .certificat .certificat-face--front[data-v-6d3a06cd] {
+      line-height: inherit;
+      display: block;
+      font-size: 1rem;
+      scroll-behavior: smooth;
+      width: 100%;
+      background-size: cover;
+      position: initial;
+      box-shadow: none
+    }
+
+    .certificat-wrapper[data-v-6d3a06cd] {
+      text-align: left;
+      display: flex;
+      flex-direction: row;
+      line-height: initial;
+      color: #444;
+      justify-content: center;
+      align-items: flex-start;
+      margin: 0;
+      padding: 0
+    }
+
+    .certificat-wrapper .b-container[data-v-6d3a06cd] {
+      display: flex;
+      justify-content: center;
+      align-content: space-between;
+      width: 100%;
+      min-height: 100vh;
+      flex-wrap: wrap;
+      color: #444;
+      text-align: left;
+      margin: 0 auto
+    }
+
+    .certificat-wrapper .b-container .header[data-v-6d3a06cd] {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      background: #FFF
+    }
+
+    .certificat-wrapper .b-container .header .top-bar[data-v-6d3a06cd] {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      width: 100%;
+      height: 36px;
+      padding: 0 1rem;
+      background: #004277
+    }
+
+    .certificat-wrapper .b-container .header .top-bar a[data-v-6d3a06cd] {
+      display: flex;
+      width: 16px;
+      height: 16px;
+      margin: 0 .5rem 0 0;
+      transition: all .2s linear
+    }
+
+    .certificat-wrapper .b-container .header .top-bar a img[data-v-6d3a06cd] {
+      width: 16px
+    }
+
+    .certificat-wrapper .b-container .header .top-bar a[data-v-6d3a06cd]:hover {
+      opacity: .8
+    }
+
+    .certificat-wrapper .b-container .header .header-content[data-v-6d3a06cd] {
+      width: 100%;
+      max-width: 1192px;
+      height: 88px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 0 1rem
+    }
+
+    .certificat-wrapper .b-container .header .header-content img[data-v-6d3a06cd] {
+      width: 100%;
+      max-width: 190px
+    }
+
+    .certificat-wrapper .b-container .info-content[data-v-6d3a06cd] {
+      width: 100%;
+      max-width: 1192px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 0 1rem
+    }
+
+    .certificat-wrapper .b-container .info-content .justify-center[data-v-6d3a06cd] {
+      text-align: center
+    }
+
+    .certificat-wrapper .b-container .info-content .justify-center span[data-v-6d3a06cd] {
+      display: flex;
+      justify-content: center
+    }
+
+    .certificat-wrapper .b-container .info-content .welcome[data-v-6d3a06cd] {
+      font-family: 'Open Sans';
+      font-size: 16px;
+      color: #444;
+      width: 100%;
+      background: #EAF3FB;
+      padding: 1rem;
+      margin: 1rem 0 0
+    }
+
+    .certificat-wrapper .b-container .info-content .welcome span[data-v-6d3a06cd] {
+      font-family: 'Open Sans';
+      text-transform: uppercase
+    }
+
+    .certificat-wrapper .b-container .info-content .welcome div[data-v-6d3a06cd] {
+      margin: 1rem 0 0;
+      display: flex;
+      justify-content: center
+    }
+
+    .certificat-wrapper .b-container .info-content .welcome div a[data-v-6d3a06cd] {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: -moz-fit-content;
+      width: fit-content;
+      height: 52px;
+      padding: 0 16px;
+      border-radius: 80px;
+      transition: all .2s linear
+    }
+
+    .certificat-wrapper .b-container .info-content .welcome div a span[data-v-6d3a06cd] {
+      font-size: 24px;
+      margin: 0 4px 0 0
+    }
+
+    .certificat-wrapper .b-container .info-content .welcome div a[data-v-6d3a06cd]:hover {
+      text-decoration: none
+    }
+
+    .certificat-wrapper .b-container .info-content .welcome div .download-pdf[data-v-6d3a06cd] {
+      font-family: 'Open Sans';
+      font-size: 16px;
+      text-transform: uppercase;
+      color: #fff;
+      background: #0679FF;
+      text-align: center;
+      margin: .5rem 0 .25rem
+    }
+
+    .certificat-wrapper .b-container .info-content .welcome div .download-pdf[data-v-6d3a06cd]:hover {
+      color: #fff;
+      background: #003082
+    }
+
+    .certificat-wrapper .b-container .info-content .bloc-name[data-v-6d3a06cd] {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      background: #FFF;
+      padding: 1rem;
+      margin: 24px 0 16px
+    }
+
+    .certificat-wrapper .b-container .info-content .bloc-name .left[data-v-6d3a06cd] {
+      width: calc(100% - 386px);
+      display: flex;
+      flex-wrap: wrap
+    }
+
+    .certificat-wrapper .b-container .info-content .bloc-name .left .test-name[data-v-6d3a06cd] {
+      font-family: 'Open Sans';
+      font-size: 18px;
+      color: #0188d9;
+      width: 100%
+    }
+
+    .certificat-wrapper .b-container .info-content .bloc-name .left .laureat-name[data-v-6d3a06cd] {
+      font-family: 'Open Sans';
+      font-size: 56px;
+      line-height: 60px;
+      color: #003082;
+      width: 100%
+    }
+
+    .certificat-wrapper .b-container .info-content .bloc-name .left .birthdate[data-v-6d3a06cd] {
+      font-family: 'Open Sans';
+      font-size: 16px;
+      color: #444;
+      margin: 16px 0 0;
+      width: 100%
+    }
+
+    .certificat-wrapper .b-container .info-content .bloc-name .right[data-v-6d3a06cd] {
+      width: 386px
+    }
+
+    .certificat-wrapper .b-container .info-content .bloc-name .right a[data-v-6d3a06cd] {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 52px;
+      padding: 0 16px;
+      border-radius: 80px;
+      transition: all .2s linear
+    }
+
+    .certificat-wrapper .b-container .info-content .bloc-name .right a span[data-v-6d3a06cd] {
+      font-size: 24px;
+      margin: 0 4px 0 0
+    }
+
+    .certificat-wrapper .b-container .info-content .bloc-name .right a[data-v-6d3a06cd]:hover {
+      text-decoration: none
+    }
+
+    .certificat-wrapper .b-container .info-content .bloc-name .right .download-pdf[data-v-6d3a06cd] {
+      font-family: 'Open Sans';
+      font-size: 16px;
+      text-transform: uppercase;
+      color: #fff;
+      background: #0679FF
+    }
+
+    .certificat-wrapper .b-container .info-content .bloc-name .right .download-pdf[data-v-6d3a06cd]:hover {
+      color: #fff;
+      background: #003082
+    }
+
+    .certificat-wrapper .b-container .info-content .bloc-name .right .view-proofs[data-v-6d3a06cd] {
+      font-family: 'Open Sans';
+      font-size: 16px;
+      text-transform: uppercase;
+      color: #0679ff;
+      border: solid 1px #0679FF;
+      margin: 24px 0 0
+    }
+
+    .certificat-wrapper .b-container .info-content .bloc-name .right .view-proofs[data-v-6d3a06cd]:hover {
+      color: #fff;
+      background: #0679FF
+    }
+
+    .certificat-wrapper .b-container .info-content .bloc-test[data-v-6d3a06cd] {
+      width: calc(50% - 8px);
+      background: #FFF;
+      padding: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      font-family: 'Open Sans';
+      font-size: 20px
+    }
+
+    .certificat-wrapper .b-container .info-content .bloc-test .label[data-v-6d3a06cd] {
+      color: #003082;
+      width: 30%
+    }
+
+    .certificat-wrapper .b-container .info-content .bloc-test .result[data-v-6d3a06cd] {
+      color: #444;
+      width: 70%;
+      text-align: right
+    }
+
+    .certificat-wrapper .b-container .info-content .bloc-test .border-b[data-v-6d3a06cd] {
+      width: 100%;
+      border-bottom: solid 1px #1E7CC8;
+      margin: 4px 0 14px
+    }
+
+    .certificat-wrapper .b-container .info-content .bloc-score[data-v-6d3a06cd] {
+      width: calc(50% - 8px);
+      background: #FFF;
+      padding: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      font-family: 'Open Sans';
+    }
+
+    .certificat-wrapper .b-container .info-content .bloc-score .label[data-v-6d3a06cd] {
+      color: #003082;
+      width: 50%;
+      font-size: 20px
+    }
+
+    .certificat-wrapper .b-container .info-content .bloc-score .total[data-v-6d3a06cd] {
+      font-family: 'Open Sans';
+    }
+
+    .certificat-wrapper .b-container .info-content .bloc-score .result[data-v-6d3a06cd] {
+      font-size: 24px;
+      color: #444;
+      width: 50%;
+      text-align: right;
+      font-family: 'Open Sans';
+    }
+
+    .certificat-wrapper .b-container .info-content .bloc-score .result span[data-v-6d3a06cd] {
+      font-family: 'Open Sans';
+    }
+
+    .certificat-wrapper .b-container .info-content .bloc-score .not-available[data-v-6d3a06cd] {
+      font-size: 16px;
+      color: #444;
+      width: 50%;
+      text-align: right
+    }
+
+    .certificat-wrapper .b-container .info-content .bloc-score .border-b[data-v-6d3a06cd] {
+      width: 100%;
+      border-bottom: solid 1px #1E7CC8;
+      margin: 4px 0 14px
+    }
+
+    .certificat-wrapper .b-container .info-content .bloc-score .border-b-2[data-v-6d3a06cd] {
+      width: 100%;
+      border-bottom: solid 2px #1E7CC8;
+      margin: 4px 0 14px
+    }
+
+    .certificat-wrapper .b-container .info-content .bloc-mentions[data-v-6d3a06cd] {
+      font-family: 'Open Sans';
+      font-size: 16px;
+      color: #444;
+      width: 100%;
+      background: #EAF3FB;
+      padding: 1rem;
+      margin: 16px 0 0
+    }
+
+    .certificat-wrapper .b-container .info-content .bloc-mentions a[data-v-6d3a06cd] {
+      transition: all .2s linear;
+      color: #29b7f6
+    }
+
+    .certificat-wrapper .b-container .info-content .bloc-mentions p[data-v-6d3a06cd] {
+      margin: 0;
+      padding: 0
+    }
+
+    .certificat-wrapper .b-container .footer[data-v-6d3a06cd] {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 88px;
+      padding: 0 1rem;
+      background: #ECECEC;
+      margin: 1rem 0 0;
+      font-family: 'Open Sans';
+      font-size: 14px;
+      text-align: center
+    }
+
+    .certificat-wrapper .b-container .footer .link-blue[data-v-6d3a06cd] {
+      transition: all .6s linear !important;
+      color: #29b7f6
+    }
+
+    .certificat-wrapper .b-container .footer .link-blue[data-v-6d3a06cd]:hover {
+      text-decoration: underline
+    }
+
+    @media (max-width:1312px) {
+      .certificat-wrapper .b-container .info-content .bloc-name .left[data-v-6d3a06cd] {
+        width: calc(100% - 386px);
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 16px 0 0
+      }
+
+      .certificat-wrapper .b-container .info-content .bloc-name .left .test-name[data-v-6d3a06cd] {
+        font-size: 16px
+      }
+
+      .certificat-wrapper .b-container .info-content .bloc-name .left .laureat-name[data-v-6d3a06cd] {
+        font-size: 48px;
+        line-height: 52px
+      }
+    }
+
+    @media (max-width:1024px) {
+      .certificat-wrapper .b-container .info-content[data-v-6d3a06cd] {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between
+      }
+
+      .certificat-wrapper .b-container .info-content .welcome[data-v-6d3a06cd] {
+        font-size: 14px;
+        margin: 24px 0 0
+      }
+
+      .certificat-wrapper .b-container .info-content .bloc-name[data-v-6d3a06cd] {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 24px 0
+      }
+
+      .certificat-wrapper .b-container .info-content .bloc-name .left[data-v-6d3a06cd] {
+        width: 100%
+      }
+
+      .certificat-wrapper .b-container .info-content .bloc-name .left .test-name[data-v-6d3a06cd] {
+        font-size: 16px
+      }
+
+      .certificat-wrapper .b-container .info-content .bloc-name .left .laureat-name[data-v-6d3a06cd] {
+        font-size: 26px;
+        line-height: initial
+      }
+
+      .certificat-wrapper .b-container .info-content .bloc-name .right[data-v-6d3a06cd] {
+        width: 100%;
+        margin: 16px 0 0;
+        justify-content: center
+      }
+
+      .certificat-wrapper .b-container .info-content .bloc-name .right a[data-v-6d3a06cd] {
+        font-size: 14px !important;
+        width: -moz-fit-content;
+        width: fit-content;
+        text-align: center
+      }
+
+      .certificat-wrapper .b-container .info-content .bloc-name .right a span[data-v-6d3a06cd] {
+        font-size: 20px !important
+      }
+
+      .certificat-wrapper .b-container .info-content .bloc-name .right .download-pdf[data-v-6d3a06cd] {
+        margin: 0 auto
+      }
+
+      .certificat-wrapper .b-container .info-content .bloc-name .right .view-proofs[data-v-6d3a06cd] {
+        margin: 16px auto 0
+      }
+
+      .certificat-wrapper .b-container .info-content .bloc-test[data-v-6d3a06cd] {
+        width: 100%;
+        font-family: 'Open Sans';
+        font-size: 16px
+      }
+
+      .certificat-wrapper .b-container .info-content .bloc-test .label[data-v-6d3a06cd] {
+        color: #003082;
+        width: 30%
+      }
+
+      .certificat-wrapper .b-container .info-content .bloc-score[data-v-6d3a06cd] {
+        width: 100%;
+        font-family: 'Open Sans';
+        margin: 24px 0 0
+      }
+
+      .certificat-wrapper .b-container .info-content .bloc-score .label[data-v-6d3a06cd] {
+        font-size: 16px
+      }
+
+      .certificat-wrapper .b-container .info-content .bloc-score .total[data-v-6d3a06cd] {
+        font-family: 'Open Sans';
+      }
+
+      .certificat-wrapper .b-container .info-content .bloc-score .result[data-v-6d3a06cd] {
+        font-size: 20px
+      }
+
+      .certificat-wrapper .b-container .info-content .bloc-mentions[data-v-6d3a06cd] {
+        font-size: 14px
+      }
+    }
+
+    @media (max-width:768px) {
+      .certificat-wrapper[data-v-6d3a06cd] {
+        width: 100%
+      }
+
+      .certificat-wrapper .b-container .header .top-bar[data-v-6d3a06cd] {
+        position: fixed;
+        top: 0
+      }
+
+      .certificat-wrapper .b-container .header .header-content[data-v-6d3a06cd] {
+        margin: 36px 0 0
+      }
+
+      .certificat-wrapper .b-container .info-content[data-v-6d3a06cd] {
+        padding: 0 .5rem
+      }
+
+      .certificat-wrapper .b-container .info-content .bloc-name .right a[data-v-6d3a06cd] {
+        width: 100%
+      }
+    }
+
+    @media (max-width:531px) {
+      .certificat-wrapper[data-v-6d3a06cd] {
+        margin: 0
+      }
+
+      .certificat-wrapper .b-container .footer[data-v-6d3a06cd] {
+        height: auto;
+        padding: 1rem 1rem 60px
+      }
+    }
+
+    .percent-bar {
+      position: relative
+    }
+
+    .percent-bar .number {
+      font-family: 'Open Sans';
+      font-weight: 700;
+      font-size: 8.5pt;
+      letter-spacing: .5pt;
+      display: inline-block;
+      position: absolute;
+      width: 4em;
+      transform: translate(-50%);
+      text-align: center;
+      top: -3.2mm
+    }
+
+    .percent-bar .bar {
+      display: flex;
+      align-items: center
+    }
+
+    .percent-bar .bar span {
+      font-family: 'Open Sans';
+      font-weight: 700;
+      font-size: 7.5pt
+    }
+
+    .percent-bar .bar .graph {
+      width: 30.4mm;
+      height: 3mm !important;
+      border: 1px solid #838586;
+      background-color: #838586;
+      margin: 0 1mm 0 .7mm;
+      position: relative
+    }
+
+    .percent-bar .bar .graph .level {
+      position: absolute;
+      right: 0;
+      height: 100%;
+      background-color: #fff
+    }
+
+    @page {
+      size: A4 portrait !important;
+      margin: 0 !important
+    }
+
+    html,
+    body {
+      width: 100% !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      min-width: auto !important
+    }
+
+    @media print {
+      .pdf-page .qr-code {
+        display: block;
+        position: absolute;
+        top: calc(100% - 40mm);
+        left: 1rem;
+        width: 24mm;
+        float: right;
+        height: 24mm;
+        z-index: 8000
+      }
+
+      .pdf-page .qr-code img {
+        width: 24mm;
+        height: 24mm
+      }
+
+      .pdf-page .qr-code .scan {
+        font-size: 8pt;
+        text-align: center;
+        line-height: 8pt;
+        margin: 2pt 0 0
+      }
+
+      .pdf-page .qr-code a {
+        text-decoration: none;
+        color: #222221
+      }
+
+      .pdf-page .certificat .certificat-face--front {
+        width: 100%;
+        height: 100% !important;
+        min-height: 100vh !important
+      }
+
+      .pdf-page .certificat .certificat-face--front .certificat-wrapper {
+        height: 100% !important;
+        min-height: 93vh !important
+      }
+
+      .pdf-page .certificat .certificat-face--front .certificat-wrapper .b-container .results {
+        width: 75%
+      }
+
+      .pdf-page .certificat .certificat-face--front .certificat-wrapper .b-container .results .score .label {
+        width: 25%
+      }
+
+      .pdf-page .certificat .certificat-face--front .certificat-wrapper .b-container .results .score .number {
+        width: 75%
+      }
+
+      .pdf-page .certificat .certificat-face--front .certificat-wrapper .b-container .picture {
+        display: flex;
+        width: 25%;
+        justify-content: flex-end;
+        margin: 0 0 1rem
+      }
+
+      .pdf-page .certificat .certificat-face--front .certificat-wrapper .b-container .picture img {
+        max-width: 180px
+      }
+
+      .pdf-page .certificat .certificat-face--front .certificat-wrapper .b-container .pdf-data {
+        display: flex;
+        flex-wrap: wrap
+      }
+    }
+
+    .pdf-page .certificat .certificat-face--front {
+      width: 100%;
+      height: 100% !important;
+      min-height: 100vh !important;
+      padding: 6.2mm;
+      display: flex;
+      flex-wrap: wrap;
+      background: #FFF !important
+    }
+
+    .pdf-page .certificat .certificat-face--front .score-number {
+      position: relative;
+      font-family: 'Open Sans';
+    }
+
+    .pdf-page .certificat .certificat-face--front .score-number .number {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: calc(11.5mm - 2pt);
+      height: calc(11.5mm - 2pt);
+      border: solid 2.1pt #222221;
+      border-radius: 100%;
+      background: #FFF;
+      font-weight: 700;
+      font-size: 13.2pt;
+      letter-spacing: -.2pt;
+      position: relative
+    }
+
+    .pdf-page .certificat .certificat-face--front .score-number .number:after {
+      content: "";
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 1.33mm .62mm 0 .62mm;
+      border-color: #222221 transparent transparent transparent;
+      position: absolute;
+      top: 10mm
+    }
+
+    .pdf-page .certificat .certificat-face--front .score-number .label-number {
+      white-space: nowrap;
+      font-weight: 700;
+      font-size: 9.5pt;
+      position: absolute;
+      top: 2mm
+    }
+
+    .pdf-page .certificat .certificat-face--front .score-number .label-number-left {
+      left: -18.5mm
+    }
+
+    .pdf-page .certificat .certificat-face--front .score-number .label-number-right {
+      left: 11.5mm
+    }
+
+    .pdf-page .certificat .certificat-face--front .score-number .bar {
+      display: flex;
+      align-items: center
+    }
+
+    .pdf-page .certificat .certificat-face--front .score-number .bar .n {
+      font-size: 11.3pt;
+      font-weight: 700
+    }
+
+    .pdf-page .certificat .certificat-face--front .score-number .bar .graph {
+      width: 47mm;
+      height: 3mm;
+      border: solid .5pt #222221;
+      background: linear-gradient(90deg, #c5c5c5 0%, #222221 100%);
+      margin: 0 1.7mm 0 2.6mm
+    }
+
+    .pdf-page .certificat .certificat-face--front .header {
+      width: 100%;
+      display: flex
+    }
+
+    .pdf-page .certificat .certificat-face--front .header .logo {
+      width: calc(50% - 51.5mm)
+    }
+
+    .pdf-page .certificat .certificat-face--front .header .logo img {
+      width: 45mm;
+      margin: 3mm 0 0 1mm
+    }
+
+    .pdf-page .certificat .certificat-face--front .header .title {
+      width: 104mm;
+      height: 16mm;
+      background: url(/dist/157_0x19/bg-top-header-7f955b8e.svg) no-repeat;
+      background-position: top 4px left;
+      background-size: cover;
+      text-align: center;
+      font-family: 'Open Sans';
+      text-transform: uppercase
+    }
+
+    .pdf-page .certificat .certificat-face--front .header .title .sub {
+      font-size: 11.2pt;
+      margin: 3.8mm 0 0;
+      letter-spacing: .2pt
+    }
+
+    .pdf-page .certificat .certificat-face--front .header .title .big {
+      font-size: 14pt;
+      line-height: 16pt;
+      letter-spacing: .6pt
+    }
+
+    .pdf-page .certificat .certificat-face--front .header .spacer {
+      width: calc(50% - 51.5mm)
+    }
+
+    .pdf-page .certificat .certificat-face--front .part-one {
+      width: 100%;
+      height: calc(70mm - 3pt);
+      border-top: solid 3pt #f28e2e;
+      border-left: solid 3pt #f28e2e;
+      border-right: solid 3pt #f28e2e;
+      display: flex;
+      color: #222221
+    }
+
+    .pdf-page .certificat .certificat-face--front .part-one .picture {
+      width: 40mm;
+      padding: 8mm 5.6mm 0 5mm
+    }
+
+    .pdf-page .certificat .certificat-face--front .part-one .picture .photo {
+      width: 29.6mm;
+      height: 37.4mm;
+      background: #FFF;
+      display: flex;
+      align-items: center;
+      justify-content: center
+    }
+
+    .pdf-page .certificat .certificat-face--front .part-one .picture .photo img {
+      max-width: 100%;
+      height: 100%
+    }
+
+    .pdf-page .certificat .certificat-face--front .part-one .data-score {
+      width: 129mm;
+      height: 49.2mm;
+      margin: 3.6mm 0 0;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      font-family: 'Open Sans';
+    }
+
+    .pdf-page .certificat .certificat-face--front .part-one .data-score .data {
+      width: 66mm;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center
+    }
+
+    .pdf-page .certificat .certificat-face--front .part-one .data-score .data .name {
+      border-left: solid 1pt #222221;
+      border-bottom: solid 1pt #222221;
+      height: 6.7mm;
+      margin: 0;
+      padding: 0 0 0 2.3mm;
+      width: 100%;
+      display: flex;
+      align-items: center
+    }
+
+    .pdf-page .certificat .certificat-face--front .part-one .data-score .data .name .in-name {
+      font-weight: 700;
+      font-size: 9.5pt;
+      line-height: 8.9pt;
+      position: relative;
+      top: -1mm
+    }
+
+    .pdf-page .certificat .certificat-face--front .part-one .data-score .data .label-name {
+      border-left: solid 1pt #222221;
+      border-bottom: solid 1pt #222221;
+      height: 4.6mm;
+      width: 21mm;
+      font-size: 7pt;
+      display: flex;
+      align-items: center;
+      padding: 0 0 0 2.3mm;
+      margin: 0 45mm 0 0
+    }
+
+    .pdf-page .certificat .certificat-face--front .part-one .data-score .data .id-number {
+      border-left: solid 1pt #222221;
+      border-bottom: solid 1pt #222221;
+      height: 8mm;
+      margin: 4mm 0 0;
+      padding: .2mm 0 0 1.3mm;
+      width: 45mm;
+      display: flex;
+      align-items: center;
+      font-weight: 700;
+      font-size: 9.5pt
+    }
+
+    .pdf-page .certificat .certificat-face--front .part-one .data-score .data .birthdate {
+      border-left: solid 1pt #222221;
+      border-bottom: solid 1pt #222221;
+      height: 8mm;
+      margin: 4mm 0 0;
+      padding: .2mm 0 0 1.3mm;
+      width: 21mm;
+      display: flex;
+      align-items: center;
+      font-weight: 700;
+      font-size: 9.5pt
+    }
+
+    .pdf-page .certificat .certificat-face--front .part-one .data-score .data .label-id {
+      border-left: solid 1pt #222221;
+      border-bottom: solid 1pt #222221;
+      height: 7mm;
+      margin: 0;
+      padding: .6mm 0 0 1.3mm;
+      width: 21mm;
+      display: flex;
+      align-items: center;
+      font-size: 7.5pt;
+      line-height: 8.5pt
+    }
+
+    .pdf-page .certificat .certificat-face--front .part-one .data-score .data .label-birth {
+      border-left: solid 1pt #222221;
+      border-bottom: solid 1pt #222221;
+      height: 7mm;
+      margin: 0 0 0 24mm;
+      padding: .6mm 0 0 1.3mm;
+      width: 15mm;
+      display: flex;
+      align-items: center;
+      font-size: 7.5pt;
+      line-height: 8pt
+    }
+
+    .pdf-page .certificat .certificat-face--front .part-one .data-score .data .test-date {
+      border-left: solid 1pt #222221;
+      border-bottom: solid 1pt #222221;
+      height: 6.9mm;
+      margin: 3.7mm 0 0;
+      padding: 0 0 0 1.3mm;
+      width: 45mm;
+      display: flex;
+      align-items: center;
+      font-weight: 700;
+      font-size: 9.5pt
+    }
+
+    .pdf-page .certificat .certificat-face--front .part-one .data-score .data .valid-until {
+      border-left: solid 1pt #222221;
+      border-bottom: solid 1pt #222221;
+      height: 6.9mm;
+      margin: 3.7mm 0 0;
+      padding: 0 0 0 1.3mm;
+      width: 21mm;
+      display: flex;
+      align-items: center;
+      font-weight: 700;
+      font-size: 9.5pt
+    }
+
+    .pdf-page .certificat .certificat-face--front .part-one .data-score .data .label-test {
+      border-left: solid 1pt #222221;
+      border-bottom: solid 1pt #222221;
+      height: 7mm;
+      margin: 0;
+      padding: .1mm 0 0 1.3mm;
+      width: 21mm;
+      display: flex;
+      align-items: center;
+      font-size: 7.5pt;
+      line-height: 7.5pt
+    }
+
+    .pdf-page .certificat .certificat-face--front .part-one .data-score .data .label-valid {
+      border-left: solid 1pt #222221;
+      border-bottom: solid 1pt #222221;
+      height: 7mm;
+      margin: 0 0 0 24mm;
+      padding: .1mm 0 0 1.3mm;
+      width: 15mm;
+      display: flex;
+      align-items: center;
+      font-size: 7.5pt;
+      line-height: 7.5pt
+    }
+
+    .pdf-page .certificat .certificat-face--front .part-one .data-score .score {
+      width: 63mm;
+      height: 53mm;
+      border-left: solid 1pt #222221
+    }
+
+    .pdf-page .certificat .certificat-face--front .part-one .data-score .score .listening {
+      height: 23.5mm;
+      border-bottom: solid 1pt #222221;
+      padding: 0 0 0 1.4mm
+    }
+
+    .pdf-page .certificat .certificat-face--front .part-one .data-score .score .listening .title-l {
+      font-family: 'Open Sans';
+      font-size: 9pt;
+      text-transform: uppercase;
+      text-align: center;
+      width: 23mm;
+      height: 5.2mm;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #f28e2e;
+      position: relative;
+      top: -.74mm;
+      margin: 0 0 1.4mm 19mm
+    }
+
+    .pdf-page .certificat .certificat-face--front .part-one .data-score .score .listening .no-listening {
+      color: #a0a3a5;
+      font-size: 8pt;
+      font-weight: 700;
+      margin: 28pt 0 0;
+      text-align: center
+    }
+
+    .pdf-page .certificat .certificat-face--front .part-one .data-score .score .reading {
+      padding: 0 0 0 1.4mm
+    }
+
+    .pdf-page .certificat .certificat-face--front .part-one .data-score .score .reading .title-r {
+      font-family: 'Open Sans';
+      font-size: 9pt;
+      text-transform: uppercase;
+      text-align: center;
+      width: 23mm;
+      height: 5.2mm;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #f28e2e;
+      margin: 1.25mm 0 2.83mm 17.95mm
+    }
+
+    .pdf-page .certificat .certificat-face--front .part-one .data-score .score .reading .no-reading {
+      color: #a0a3a5;
+      font-size: 8pt;
+      font-weight: 700;
+      margin: 46pt 0 0;
+      text-align: center
+    }
+
+    .pdf-page .certificat .certificat-face--front .part-one .data-score .institution-name {
+      font-family: 'Open Sans';
+      font-weight: 700;
+      font-size: 10pt;
+      line-height: 11pt;
+      margin: 2.77mm 0 0
+    }
+
+    .pdf-page .certificat .certificat-face--front .part-one .total-score {
+      width: 26mm;
+      height: 53mm;
+      border-left: solid 1pt #222221;
+      margin: 2.9mm 0 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center
+    }
+
+    .pdf-page .certificat .certificat-face--front .part-one .total-score .title-t {
+      font-family: 'Open Sans';
+      font-size: 9pt;
+      text-transform: uppercase;
+      text-align: center;
+      color: #000;
+      width: 19.72mm;
+      height: 10.76mm;
+      background: #f28e2e;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      top: -.37mm
+    }
+
+    .pdf-page .certificat .certificat-face--front .part-one .total-score .number {
+      font-family: 'Open Sans';
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: calc(14.74mm - 1.5pt);
+      height: calc(14.74mm - 1.5pt);
+      border: solid 1.5pt #222221;
+      border-radius: 100%;
+      background: #FFF;
+      font-weight: 700;
+      font-size: 17pt;
+      letter-spacing: .5pt;
+      margin: 4.63mm 0 0
+    }
+
+    .pdf-page .certificat .certificat-face--front .part-one .total-score .number span {
+      color: #a0a3a5
+    }
+
+    .pdf-page .certificat .certificat-face--front .part-one .total-score .qr-code {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      width: 24mm;
+      height: auto;
+      position: initial
+    }
+
+    .pdf-page .certificat .certificat-face--front .part-one .total-score .qr-code img {
+      width: 22mm;
+      height: 22mm
+    }
+
+    .pdf-page .certificat .certificat-face--front .part-one .total-score .qr-code .scan {
+      font-size: 5pt;
+      letter-spacing: 0;
+      text-align: center;
+      line-height: 5.5pt;
+      margin: 2.5mm 0 2mm
+    }
+
+    .pdf-page .certificat .certificat-face--front .part-one .total-score .qr-code a {
+      text-decoration: none;
+      color: #222221
+    }
+
+    .pdf-page .certificat .certificat-face--front .footer-one {
+      width: 100%;
+      height: 15mm;
+      border: solid 3pt #f28e2e;
+      background: url(/dist/157_0x19/bg-footer-one-8fe9dcfe.svg) no-repeat left top;
+      background-size: cover
+    }
+
+    .pdf-page .certificat .certificat-face--front .footer-one .ets-address {
+      font-family: 'Open Sans';
+      font-size: 5.6pt;
+      display: flex;
+      margin: 3.28mm 0 0 4mm
+    }
+
+    .pdf-page .certificat .certificat-face--front .footer-one .copyright {
+      display: flex;
+      align-items: center;
+      margin: 1.8mm 0 0
+    }
+
+    .pdf-page .certificat .certificat-face--front .footer-one .copyright img {
+      width: 4mm;
+      margin: 0 .8mm 0 0
+    }
+
+    .pdf-page .certificat .certificat-face--front .footer-one .copyright {
+      font-family: 'Open Sans';
+      font-size: 5.4pt
+    }
+
+    .pdf-page .certificat .certificat-face--front .cut {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      margin: 2mm 0 0;
+      width: 100%
+    }
+
+    .pdf-page .certificat .certificat-face--front .cut .border {
+      border-bottom: dashed 1.8pt #222221;
+      width: calc(100% - 4.08mm);
+      height: 1mm
+    }
+
+    .pdf-page .certificat .certificat-face--front .cut img {
+      width: 3.08mm;
+      margin: .2mm 0 0 1mm
+    }
+
+    .pdf-page .certificat .certificat-face--front .cut .detach {
+      width: 100%;
+      text-align: right;
+      font-family: 'Open Sans';
+      font-size: 5.5pt;
+      padding: 0 5.3mm 0 0
+    }
+
+    .pdf-page .certificat .certificat-face--front .part-two {
+      display: flex;
+      justify-content: space-between;
+      width: 100%
+    }
+
+    .pdf-page .certificat .certificat-face--front .part-two .listening-bloc {
+      width: calc(50% - .896mm);
+      display: flex;
+      flex-wrap: wrap
+    }
+
+    .pdf-page .certificat .certificat-face--front .part-two .listening-bloc .head-bloc {
+      width: 100%;
+      height: calc(6.33mm - 1pt);
+      background: #627dad;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Open Sans';
+      text-transform: uppercase;
+      font-size: 11.8pt;
+      letter-spacing: 1pt
+    }
+
+    .pdf-page .certificat .certificat-face--front .part-two .listening-bloc .content-bloc {
+      width: 100%;
+      height: 64.56mm;
+      border-left: solid 1pt #627dad;
+      border-right: solid 1pt #627dad;
+      padding: 3.2mm 1.9mm 2.46mm;
+      font-family: 'Open Sans';
+      font-size: 7.5pt;
+      line-height: 8.5pt
+    }
+
+    .pdf-page .certificat .certificat-face--front .part-two .listening-bloc .content-bloc p {
+      margin: 0;
+      padding: 0
+    }
+
+    .pdf-page .certificat .certificat-face--front .part-two .listening-bloc .content-bloc ul {
+      margin: 3mm 0;
+      padding: 0 0 0 4mm
+    }
+
+    .pdf-page .certificat .certificat-face--front .part-two .listening-bloc .footer-bloc {
+      height: 16mm;
+      width: 100%;
+      background: #7d9bce;
+      border: solid 1pt #627dad;
+      display: flex
+    }
+
+    .pdf-page .certificat .certificat-face--front .part-two .listening-bloc .footer-bloc .abilities {
+      width: 42mm;
+      border-right: solid 1pt #627dad;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Open Sans';
+      font-size: 8pt;
+      text-transform: uppercase
+    }
+
+    .pdf-page .certificat .certificat-face--front .part-two .listening-bloc .footer-bloc .percent {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      position: relative;
+      width: calc(100% - 42mm)
+    }
+
+    .pdf-page .certificat .certificat-face--front .part-two .listening-bloc .footer-bloc .percent .title-p {
+      font-family: 'Open Sans';
+      font-size: 8pt;
+      line-height: 9pt;
+      text-transform: uppercase;
+      width: 100%;
+      text-align: center;
+      margin: 1.1mm 0 0
+    }
+
+    .pdf-page .certificat .certificat-face--front .part-two .listening-bloc .footer-bloc .percent .arrow {
+      width: 100%;
+      display: flex;
+      align-items: flex-end;
+      position: absolute;
+      left: 25.6mm;
+      top: 7.5mm
+    }
+
+    .pdf-page .certificat .certificat-face--front .part-two .listening-bloc .footer-bloc .percent .arrow img {
+      width: 7mm
+    }
+
+    .pdf-page .certificat .certificat-face--front .part-two .listening-bloc .footer-bloc .percent .arrow span {
+      font-family: 'Open Sans';
+      font-weight: 700;
+      font-size: 7pt;
+      position: relative;
+      top: -.5pt
+    }
+
+    .pdf-page .certificat .certificat-face--front .part-two .listening-bloc .footer-bloc .percent .ex-bar {
+      display: flex;
+      align-items: center;
+      margin: 1.5mm 0 0 7mm
+    }
+
+    .pdf-page .certificat .certificat-face--front .part-two .listening-bloc .footer-bloc .percent .ex-bar span {
+      font-family: 'Open Sans';
+      font-size: 7pt;
+      font-weight: 700
+    }
+
+    .pdf-page .certificat .certificat-face--front .part-two .listening-bloc .footer-bloc .percent .ex-bar .graph {
+      width: 31.7mm;
+      border: solid 1px #626364;
+      background-color: #626364;
+      margin: 0 1mm
+    }
+
+    .pdf-page .certificat .certificat-face--front .part-two .listening-bloc .footer-bloc .percent .ex-bar .graph .level {
+      position: relative;
+      width: 15.7mm;
+      height: 2mm;
+      left: 50%;
+      background: #fff
+    }
+
+    .pdf-page .certificat .certificat-face--front .part-two .reading-bloc {
+      width: calc(50% - .896mm);
+      display: flex;
+      flex-wrap: wrap
+    }
+
+    .pdf-page .certificat .certificat-face--front .part-two .reading-bloc .head-bloc {
+      width: 100%;
+      height: calc(6.33mm - 1pt);
+      background: #97cb98;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Open Sans';
+      text-transform: uppercase;
+      font-size: 11.8pt;
+      letter-spacing: 1pt
+    }
+
+    .pdf-page .certificat .certificat-face--front .part-two .reading-bloc .content-bloc {
+      width: 100%;
+      height: 64.56mm;
+      border-left: solid 1pt #97cb98;
+      border-right: solid 1pt #97cb98;
+      padding: 3.2mm 1.9mm 2.46mm;
+      font-family: 'Open Sans';
+      font-size: 7.5pt;
+      line-height: 8.5pt
+    }
+
+    .pdf-page .certificat .certificat-face--front .part-two .reading-bloc .content-bloc p {
+      margin: 0;
+      padding: 0
+    }
+
+    .pdf-page .certificat .certificat-face--front .part-two .reading-bloc .content-bloc ul {
+      margin: 3mm 0;
+      padding: 0 0 0 4mm
+    }
+
+    .pdf-page .certificat .certificat-face--front .part-two .reading-bloc .footer-bloc {
+      height: 16mm;
+      width: 100%;
+      background: #b9dcbf;
+      border: solid 1pt #97cb98;
+      display: flex
+    }
+
+    .pdf-page .certificat .certificat-face--front .part-two .reading-bloc .footer-bloc .abilities {
+      width: 42mm;
+      border-right: solid 1pt #97cb98;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Open Sans';
+      font-size: 8pt;
+      text-transform: uppercase
+    }
+
+    .pdf-page .certificat .certificat-face--front .part-two .reading-bloc .footer-bloc .percent {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      position: relative;
+      width: calc(100% - 42mm)
+    }
+
+    .pdf-page .certificat .certificat-face--front .part-two .reading-bloc .footer-bloc .percent .title-p {
+      font-family: 'Open Sans';
+      font-size: 8pt;
+      line-height: 9pt;
+      text-transform: uppercase;
+      width: 100%;
+      text-align: center;
+      margin: 1.1mm 0 0
+    }
+
+    .pdf-page .certificat .certificat-face--front .part-two .reading-bloc .footer-bloc .percent .arrow {
+      width: 100%;
+      display: flex;
+      align-items: flex-end;
+      position: absolute;
+      left: 25.6mm;
+      top: 7.5mm
+    }
+
+    .pdf-page .certificat .certificat-face--front .part-two .reading-bloc .footer-bloc .percent .arrow img {
+      width: 7mm
+    }
+
+    .pdf-page .certificat .certificat-face--front .part-two .reading-bloc .footer-bloc .percent .arrow span {
+      font-family: 'Open Sans';
+      font-weight: 700;
+      font-size: 7pt;
+      position: relative;
+      top: -.5pt
+    }
+
+    .pdf-page .certificat .certificat-face--front .part-two .reading-bloc .footer-bloc .percent .ex-bar {
+      display: flex;
+      align-items: center;
+      margin: 1.5mm 0 0 7mm
+    }
+
+    .pdf-page .certificat .certificat-face--front .part-two .reading-bloc .footer-bloc .percent .ex-bar span {
+      font-family: 'Open Sans';
+      font-size: 7pt;
+      font-weight: 700
+    }
+
+    .pdf-page .certificat .certificat-face--front .part-two .reading-bloc .footer-bloc .percent .ex-bar .graph {
+      width: 31.7mm;
+      border: solid 1px #a1a5a7;
+      background-color: #a1a5a7;
+      margin: 0 1mm
+    }
+
+    .pdf-page .certificat .certificat-face--front .part-two .reading-bloc .footer-bloc .percent .ex-bar .graph .level {
+      position: relative;
+      width: 15.7mm;
+      height: 2mm;
+      left: 50%;
+      background: #fff
+    }
+
+    .pdf-page .certificat .certificat-face--front .part-three {
+      display: flex;
+      justify-content: space-between;
+      margin: 4.9mm 0 0;
+      width: 100%
+    }
+
+    .pdf-page .certificat .certificat-face--front .part-three .listening-table,
+    .pdf-page .certificat .certificat-face--front .part-three .reading-table {
+      width: calc(50% - .896mm)
+    }
+
+    .pdf-page .certificat .certificat-face--front .part-three .listening-table table,
+    .pdf-page .certificat .certificat-face--front .part-three .listening-table td,
+    .pdf-page .certificat .certificat-face--front .part-three .reading-table table,
+    .pdf-page .certificat .certificat-face--front .part-three .reading-table td {
+      border: solid 1pt #222221
+    }
+
+    .pdf-page .certificat .certificat-face--front .part-three .listening-table table,
+    .pdf-page .certificat .certificat-face--front .part-three .reading-table table {
+      width: 100%;
+      border-collapse: collapse
+    }
+
+    .pdf-page .certificat .certificat-face--front .part-three .listening-table table td,
+    .pdf-page .certificat .certificat-face--front .part-three .reading-table table td {
+      width: 50%;
+      height: 10.76mm;
+      padding: 0 1.6mm;
+      font-family: 'Open Sans';
+      font-weight: 700;
+      font-size: 6.6pt;
+      line-height: 7.5pt;
+      letter-spacing: -.5pt
+    }
+
+    .pdf-page .certificat .certificat-face--front .part-four {
+      font-family: 'Open Sans';
+      font-weight: 700;
+      font-size: 10pt;
+      line-height: 9pt;
+      width: 100%;
+      margin: 2mm;
+      padding: 0 0 0 5mm
+    }
+
+    .pdf-page .certificat .certificat-face--front .part-four a {
+      color: #222221;
+      text-decoration: none
+    }
+
+    .pdf-page .certificat .certificat-face--front .part-five {
+      width: 100%;
+      border: solid 1pt #f28e2e;
+      height: 21mm;
+      padding: 2mm;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap
+    }
+
+    .pdf-page .certificat .certificat-face--front .part-five div {
+      width: 100%
+    }
+
+    .pdf-page .certificat .certificat-face--front .part-five .title-h {
+      font-family: 'Open Sans';
+      font-weight: 700;
+      font-size: 7pt;
+      line-height: 9pt;
+      text-transform: uppercase
+    }
+
+    .pdf-page .certificat .certificat-face--front .part-five .sub-title {
+      font-family: 'Open Sans';
+      font-weight: 700;
+      font-size: 7pt;
+      line-height: 14pt;
+      letter-spacing: .1pt
+    }
+
+    .pdf-page .certificat .certificat-face--front .part-five .explain {
+      font-family: 'Open Sans';
+      font-size: 7.5pt;
+      line-height: 8pt;
+      letter-spacing: .1pt
+    }
+
+    .pdf-page .certificat .certificat-face--front .part-five .note {
+      font-family: 'Open Sans';
+      font-size: 7.5pt;
+      letter-spacing: .1pt;
+      margin: 0
+    }
+
+    .pdf-page .certificat .certificat-face--front .copyright {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      font-family: 'Open Sans';
+      font-size: 5.5pt;
+      letter-spacing: .1pt;
+      padding: 0 0 0 3mm;
+      margin: 1.5mm 0 0
+    }
+
+    .pdf-page .certificat .certificat-face--front .copyright img {
+      width: 4mm;
+      margin: 0 .5mm 0 0
+    }
+
+    .opened-proofs {
+      position: sticky
+    }
+
+    .closed-proofs {
+      position: absolute;
+      right: -424px
+    }
+
+    .proof-drawer-ets {
+      box-shadow: -2px 0 10px #0000000d;
+      z-index: 1;
+      transition: all .33s ease
+    }
+
+    .proof-drawer-ets .proof-container-ets {
+      position: relative;
+      z-index: 1;
+      width: 424px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      height: 100vh;
+      color: #444
+    }
+
+    .proof-drawer-ets .proof-container-ets .top-content .scrolling .title-proofs {
+      box-shadow: 0 4px 10px -6px #00000040
+    }
+
+    .proof-drawer-ets .proof-container-ets .top-content .title-proofs {
+      font-family: 'Open Sans';
+      font-size: 1rem;
+      text-transform: uppercase;
+      color: #003082;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      height: 64px;
+      padding: 0 1rem;
+      transition: box-shadow .33s ease
+    }
+
+    .proof-drawer-ets .proof-container-ets .top-content .title-proofs img {
+      margin: 0 .5rem 0 0
+    }
+
+    .proof-drawer-ets .proof-container-ets .top-content .title-proofs .close-proof-nav {
+      font-size: 1.5rem;
+      color: #003082;
+      cursor: pointer;
+      transition: all .33s ease
+    }
+
+    .proof-drawer-ets .proof-container-ets .top-content .title-proofs .close-proof-nav:hover {
+      color: #0679ff
+    }
+
+    .proof-drawer-ets .proof-container-ets .top-content .scroll-area-proofs {
+      margin: 0;
+      height: calc(100vh - 68px)
+    }
+
+    .proof-drawer-ets .proof-container-ets .top-content .scroll-area-proofs .proof-list {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      width: 100%
+    }
+
+    .proof-drawer-ets .proof-container-ets .top-content .scroll-area-proofs .proof-list .receptor {
+      display: flex;
+      align-items: center;
+      background: #FDFDFE;
+      padding: 0 1rem;
+      min-height: 66px
+    }
+
+    .proof-drawer-ets .proof-container-ets .top-content .scroll-area-proofs .proof-list .receptor img {
+      margin: 0 .5rem 0 0
+    }
+
+    .proof-drawer-ets .proof-container-ets .top-content .scroll-area-proofs .proof-list .receptor div {
+      font-family: 'Open Sans';
+      font-size: 1rem;
+      line-height: 1.1rem
+    }
+
+    .proof-drawer-ets .proof-container-ets .top-content .scroll-area-proofs .proof-list .receptor div span {
+      font-size: 20px;
+      color: #003082
+    }
+
+    .proof-drawer-ets .proof-container-ets .top-content .scroll-area-proofs .proof-list .proof-list {
+      display: flex;
+      align-items: center;
+      background: #FFF;
+      padding: 0 1rem;
+      min-height: 64px
+    }
+
+    .proof-drawer-ets .proof-container-ets .top-content .scroll-area-proofs .proof-list .proof-list img {
+      margin: 0 .5rem 0 0
+    }
+
+    .proof-drawer-ets .proof-container-ets .top-content .scroll-area-proofs .proof-list .proof-list div {
+      font-family: 'Open Sans';
+      font-size: 1rem;
+      line-height: 1.2rem
+    }
+
+    .proof-drawer-ets .proof-container-ets .top-content .scroll-area-proofs .proof-list .proof-list div span {
+      color: #003082
+    }
+
+    .proof-drawer-ets .proof-container-ets .top-content .scroll-area-proofs .proof-list .proof-list {
+      border-bottom: solid 1px #E6E7E8
+    }
+
+    .proof-drawer-ets .proof-container-ets .top-content .scroll-area-proofs .proof-list .proof-list-data {
+      font-family: 'Open Sans';
+      font-size: 1rem;
+      align-items: center;
+      background: #FFF;
+      padding: 1rem
+    }
+
+    .proof-drawer-ets .proof-container-ets .top-content .scroll-area-proofs .proof-list .proof-list-data a {
+      color: #0188d9
+    }
+
+    .proof-drawer-ets .proof-container-ets .top-content .scroll-area-proofs .footer {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center
+    }
+
+    .proof-drawer-ets .proof-container-ets .top-content .scroll-area-proofs .footer .footer-btn {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin: 24px 0
+    }
+
+    .proof-drawer-ets .proof-container-ets .top-content .scroll-area-proofs .footer .footer-btn .check-proof-button {
+      font-family: 'Open Sans';
+      color: #003082;
+      box-shadow: none;
+      border-radius: 90px;
+      height: 48px;
+      padding: 0 1rem;
+      display: flex !important;
+      align-items: center;
+      line-height: initial
+    }
+
+    .proof-drawer-ets .proof-container-ets .top-content .scroll-area-proofs .footer .footer-btn .check-proof-button i {
+      font-size: 1.5rem
+    }
+
+    .proof-drawer-ets .proof-container-ets .top-content .scroll-area-proofs .footer .footer-btn .check-proof-button:hover {
+      border: solid 1px #003082;
+      box-shadow: 0 0 10px #0003
+    }
+
+    .proof-drawer-ets .proof-container-ets .top-content .scroll-area-proofs .footer .footer-top {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 1.5rem 0 0
+    }
+
+    .proof-drawer-ets .proof-container-ets .top-content .scroll-area-proofs .footer .footer-top img {
+      margin: 0 .2rem 0 0;
+      position: relative;
+      top: -2px
+    }
+
+    .proof-drawer-ets .proof-container-ets .top-content .scroll-area-proofs .footer .footer-links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      padding: 1rem 0 2.5rem
+    }
+
+    .proof-drawer-ets .proof-container-ets .top-content .scroll-area-proofs .footer .footer-links img {
+      margin: 0 0 0 .5rem
+    }
+
+    @media (max-width: 1450px) {
+      .proof-drawer-ets .proof-container-ets {
+        width: 360px
+      }
+
+      .proof-drawer-ets .proof-container-ets .top-content .title-proofs {
+        font-size: .95rem
+      }
+
+      .proof-drawer-ets .proof-container-ets .top-content .title-proofs img {
+        margin: 0 .1rem 0 0;
+        width: 30px
+      }
+
+      .proof-drawer-ets .proof-container-ets .top-content .title-proofs .close-proof-nav {
+        font-size: 1.5rem;
+        color: #003082
+      }
+
+      .proof-drawer-ets .proof-container-ets .top-content .scroll-area-proofs {
+        margin: 0
+      }
+
+      .proof-drawer-ets .proof-container-ets .top-content .scroll-area-proofs .proof-list {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 100%
+      }
+
+      .proof-drawer-ets .proof-container-ets .top-content .scroll-area-proofs .proof-list .receptor img {
+        margin: 0 .5rem 0 0;
+        width: 40px
+      }
+
+      .proof-drawer-ets .proof-container-ets .top-content .scroll-area-proofs .proof-list .receptor div {
+        font-size: .95rem;
+        line-height: 1rem
+      }
+
+      .proof-drawer-ets .proof-container-ets .top-content .scroll-area-proofs .proof-list .receptor div span {
+        font-size: 18px
+      }
+
+      .proof-drawer-ets .proof-container-ets .top-content .scroll-area-proofs .proof-list .proof-list img {
+        margin: 0 .5rem 0 0;
+        width: 40px
+      }
+
+      .proof-drawer-ets .proof-container-ets .top-content .scroll-area-proofs .proof-list .proof-list div {
+        font-size: .95rem;
+        line-height: 1rem
+      }
+
+      .proof-drawer-ets .proof-container-ets .top-content .scroll-area-proofs .proof-list .proof-list-data {
+        font-size: .95rem
+      }
+    }
+
+    @media (max-width: 1230px) {
+      .opened-proofs {
+        position: fixed;
+        right: 0
+      }
+
+      .proof-drawer-ets {
+        top: 0;
+        min-height: 100vh;
+        background: #FFF
+      }
+    }
+
+    @media (max-width: 768px) {
+      .closed-proofs {
+        right: -100%
+      }
+
+      .proof-drawer-ets,
+      .proof-drawer-ets .proof-container-ets {
+        width: 100%
+      }
+    }
+
+    @media (max-width: 400px) {
+      .proof-drawer-ets .proof-container-ets {
+        height: initial
+      }
+    }
+
+    body[data-v-8614d126]::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3)
+    }
+
+    body[data-v-8614d126]::-webkit-scrollbar-thumb {
+      background-color: #a9a9a9;
+      outline: 1px solid slategrey
+    }
+
+    .qr-code[data-v-8614d126] {
+      display: none
+    }
+
+    .certificat-face[data-v-8614d126] {
+      background: url(/ng.jpg) no-repeat center center !important;
+      background-size: cover !important
+    }
+
+    .certificat .certificat-face--front[data-v-8614d126] {
+      line-height: inherit;
+      display: block;
+      font-size: 1rem;
+      scroll-behavior: smooth;
+      width: 100%;
+      background-size: cover;
+      position: initial;
+      box-shadow: none
+    }
+
+    .certificat-wrapper[data-v-8614d126] {
+      text-align: left;
+      display: flex;
+      flex-direction: row;
+      line-height: initial;
+      color: #444;
+      justify-content: center;
+      align-items: flex-start;
+      margin: 0;
+      padding: 0
+    }
+
+    .certificat-wrapper .b-container[data-v-8614d126] {
+      display: flex;
+      justify-content: center;
+      align-content: space-between;
+      width: 100%;
+      min-height: 100vh;
+      flex-wrap: wrap;
+      color: #444;
+      text-align: left;
+      margin: 0 auto
+    }
+
+    .certificat-wrapper .b-container .header[data-v-8614d126] {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      background: #FFF
+    }
+
+    .certificat-wrapper .b-container .header .top-bar[data-v-8614d126] {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      width: 100%;
+      height: 36px;
+      padding: 0 1rem;
+      background: #004277
+    }
+
+    .certificat-wrapper .b-container .header .top-bar a[data-v-8614d126] {
+      display: flex;
+      width: 16px;
+      height: 16px;
+      margin: 0 .5rem 0 0;
+      transition: all .2s linear
+    }
+
+    .certificat-wrapper .b-container .header .top-bar a img[data-v-8614d126] {
+      width: 16px
+    }
+
+    .certificat-wrapper .b-container .header .top-bar a[data-v-8614d126]:hover {
+      opacity: .8
+    }
+
+    .certificat-wrapper .b-container .header .header-content[data-v-8614d126] {
+      width: 100%;
+      max-width: 1192px;
+      height: 88px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 0 1rem
+    }
+
+    .certificat-wrapper .b-container .header .header-content img[data-v-8614d126] {
+      width: 100%;
+      max-width: 190px
+    }
+
+    .certificat-wrapper .b-container .info-content[data-v-8614d126] {
+      width: 100%;
+      max-width: 1192px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 0 1rem
+    }
+
+    .certificat-wrapper .b-container .info-content .justify-center[data-v-8614d126] {
+      text-align: center
+    }
+
+    .certificat-wrapper .b-container .info-content .justify-center span[data-v-8614d126] {
+      display: flex;
+      justify-content: center
+    }
+
+    .certificat-wrapper .b-container .info-content .welcome[data-v-8614d126] {
+      font-family: 'Open Sans';
+      font-size: 16px;
+      color: #444;
+      width: 100%;
+      background: #EAF3FB;
+      padding: 1rem;
+      margin: 1rem 0 0
+    }
+
+    .certificat-wrapper .b-container .info-content .welcome span[data-v-8614d126] {
+      font-family: 'Open Sans';
+      text-transform: uppercase
+    }
+
+    .certificat-wrapper .b-container .info-content .welcome div[data-v-8614d126] {
+      margin: 1rem 0 0;
+      display: flex;
+      justify-content: center
+    }
+
+    .certificat-wrapper .b-container .info-content .welcome div a[data-v-8614d126] {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: -moz-fit-content;
+      width: fit-content;
+      height: 52px;
+      padding: 0 16px;
+      border-radius: 80px;
+      transition: all .2s linear
+    }
+
+    .certificat-wrapper .b-container .info-content .welcome div a span[data-v-8614d126] {
+      font-size: 24px;
+      margin: 0 4px 0 0
+    }
+
+    .certificat-wrapper .b-container .info-content .welcome div a[data-v-8614d126]:hover {
+      text-decoration: none
+    }
+
+    .certificat-wrapper .b-container .info-content .welcome div .download-pdf[data-v-8614d126] {
+      font-family: 'Open Sans';
+      font-size: 16px;
+      text-transform: uppercase;
+      color: #fff;
+      background: #0679FF;
+      text-align: center;
+      margin: .5rem 0 .25rem
+    }
+
+    .certificat-wrapper .b-container .info-content .welcome div .download-pdf[data-v-8614d126]:hover {
+      color: #fff;
+      background: #003082
+    }
+
+    .certificat-wrapper .b-container .info-content .bloc-name[data-v-8614d126] {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      background: #FFF;
+      padding: 1rem;
+      margin: 24px 0 16px
+    }
+
+    .certificat-wrapper .b-container .info-content .bloc-name .left[data-v-8614d126] {
+      width: calc(100% - 386px);
+      display: flex;
+      flex-wrap: wrap
+    }
+
+    .certificat-wrapper .b-container .info-content .bloc-name .left .test-name[data-v-8614d126] {
+      font-family: 'Open Sans';
+      font-size: 18px;
+      color: #0188d9;
+      width: 100%
+    }
+
+    .certificat-wrapper .b-container .info-content .bloc-name .left .laureat-name[data-v-8614d126] {
+      font-family: 'Open Sans';
+      font-size: 56px;
+      line-height: 60px;
+      color: #003082;
+      width: 100%
+    }
+
+    .certificat-wrapper .b-container .info-content .bloc-name .left .birthdate[data-v-8614d126] {
+      font-family: 'Open Sans';
+      font-size: 16px;
+      color: #444;
+      margin: 16px 0 0;
+      width: 100%
+    }
+
+    .certificat-wrapper .b-container .info-content .bloc-name .right[data-v-8614d126] {
+      width: 386px
+    }
+
+    .certificat-wrapper .b-container .info-content .bloc-name .right a[data-v-8614d126] {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 52px;
+      padding: 0 16px;
+      border-radius: 80px;
+      transition: all .2s linear
+    }
+
+    .certificat-wrapper .b-container .info-content .bloc-name .right a span[data-v-8614d126] {
+      font-size: 24px;
+      margin: 0 4px 0 0
+    }
+
+    .certificat-wrapper .b-container .info-content .bloc-name .right a[data-v-8614d126]:hover {
+      text-decoration: none
+    }
+
+    .certificat-wrapper .b-container .info-content .bloc-name .right .download-pdf[data-v-8614d126] {
+      font-family: 'Open Sans';
+      font-size: 16px;
+      text-transform: uppercase;
+      color: #fff;
+      background: #0679FF
+    }
+
+    .certificat-wrapper .b-container .info-content .bloc-name .right .download-pdf[data-v-8614d126]:hover {
+      color: #fff;
+      background: #003082
+    }
+
+    .certificat-wrapper .b-container .info-content .bloc-name .right .view-proofs[data-v-8614d126] {
+      font-family: 'Open Sans';
+      font-size: 16px;
+      text-transform: uppercase;
+      color: #0679ff;
+      border: solid 1px #0679FF;
+      margin: 24px 0 0
+    }
+
+    .certificat-wrapper .b-container .info-content .bloc-name .right .view-proofs[data-v-8614d126]:hover {
+      color: #fff;
+      background: #0679FF
+    }
+
+    .certificat-wrapper .b-container .info-content .bloc-test[data-v-8614d126] {
+      width: calc(50% - 8px);
+      background: #FFF;
+      padding: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      font-family: 'Open Sans';
+      font-size: 20px
+    }
+
+    .certificat-wrapper .b-container .info-content .bloc-test .label[data-v-8614d126] {
+      color: #003082;
+      width: 30%
+    }
+
+    .certificat-wrapper .b-container .info-content .bloc-test .result[data-v-8614d126] {
+      color: #444;
+      width: 70%;
+      text-align: right
+    }
+
+    .certificat-wrapper .b-container .info-content .bloc-test .border-b[data-v-8614d126] {
+      width: 100%;
+      border-bottom: solid 1px #1E7CC8;
+      margin: 4px 0 14px
+    }
+
+    .certificat-wrapper .b-container .info-content .bloc-score[data-v-8614d126] {
+      width: calc(50% - 8px);
+      background: #FFF;
+      padding: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      font-family: 'Open Sans';
+    }
+
+    .certificat-wrapper .b-container .info-content .bloc-score .label[data-v-8614d126] {
+      color: #003082;
+      width: 50%;
+      font-size: 20px
+    }
+
+    .certificat-wrapper .b-container .info-content .bloc-score .total[data-v-8614d126] {
+      font-family: 'Open Sans';
+    }
+
+    .certificat-wrapper .b-container .info-content .bloc-score .result[data-v-8614d126] {
+      font-size: 24px;
+      color: #444;
+      width: 50%;
+      text-align: right;
+      font-family: 'Open Sans';
+    }
+
+    .certificat-wrapper .b-container .info-content .bloc-score .result span[data-v-8614d126] {
+      font-family: 'Open Sans';
+    }
+
+    .certificat-wrapper .b-container .info-content .bloc-score .not-available[data-v-8614d126] {
+      font-size: 16px;
+      color: #444;
+      width: 50%;
+      text-align: right
+    }
+
+    .certificat-wrapper .b-container .info-content .bloc-score .border-b[data-v-8614d126] {
+      width: 100%;
+      border-bottom: solid 1px #1E7CC8;
+      margin: 4px 0 14px
+    }
+
+    .certificat-wrapper .b-container .info-content .bloc-score .border-b-2[data-v-8614d126] {
+      width: 100%;
+      border-bottom: solid 2px #1E7CC8;
+      margin: 4px 0 14px
+    }
+
+    .certificat-wrapper .b-container .info-content .bloc-mentions[data-v-8614d126] {
+      font-family: 'Open Sans';
+      font-size: 16px;
+      color: #444;
+      width: 100%;
+      background: #EAF3FB;
+      padding: 1rem;
+      margin: 16px 0 0
+    }
+
+    .certificat-wrapper .b-container .info-content .bloc-mentions a[data-v-8614d126] {
+      transition: all .2s linear;
+      color: #29b7f6
+    }
+
+    .certificat-wrapper .b-container .info-content .bloc-mentions p[data-v-8614d126] {
+      margin: 0;
+      padding: 0
+    }
+
+    .certificat-wrapper .b-container .footer[data-v-8614d126] {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 88px;
+      padding: 0 1rem;
+      background: #ECECEC;
+      margin: 1rem 0 0;
+      font-family: 'Open Sans';
+      font-size: 14px;
+      text-align: center
+    }
+
+    .certificat-wrapper .b-container .footer .link-blue[data-v-8614d126] {
+      transition: all .6s linear !important;
+      color: #29b7f6
+    }
+
+    .certificat-wrapper .b-container .footer .link-blue[data-v-8614d126]:hover {
+      text-decoration: underline
+    }
+
+    @media (max-width:1312px) {
+      .certificat-wrapper .b-container .info-content .bloc-name .left[data-v-8614d126] {
+        width: calc(100% - 386px);
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 16px 0 0
+      }
+
+      .certificat-wrapper .b-container .info-content .bloc-name .left .test-name[data-v-8614d126] {
+        font-size: 16px
+      }
+
+      .certificat-wrapper .b-container .info-content .bloc-name .left .laureat-name[data-v-8614d126] {
+        font-size: 48px;
+        line-height: 52px
+      }
+    }
+
+    @media (max-width:1024px) {
+      .certificat-wrapper .b-container .info-content[data-v-8614d126] {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between
+      }
+
+      .certificat-wrapper .b-container .info-content .welcome[data-v-8614d126] {
+        font-size: 14px;
+        margin: 24px 0 0
+      }
+
+      .certificat-wrapper .b-container .info-content .bloc-name[data-v-8614d126] {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 24px 0
+      }
+
+      .certificat-wrapper .b-container .info-content .bloc-name .left[data-v-8614d126] {
+        width: 100%
+      }
+
+      .certificat-wrapper .b-container .info-content .bloc-name .left .test-name[data-v-8614d126] {
+        font-size: 16px
+      }
+
+      .certificat-wrapper .b-container .info-content .bloc-name .left .laureat-name[data-v-8614d126] {
+        font-size: 26px;
+        line-height: initial
+      }
+
+      .certificat-wrapper .b-container .info-content .bloc-name .right[data-v-8614d126] {
+        width: 100%;
+        margin: 16px 0 0;
+        justify-content: center
+      }
+
+      .certificat-wrapper .b-container .info-content .bloc-name .right a[data-v-8614d126] {
+        font-size: 14px !important;
+        width: -moz-fit-content;
+        width: fit-content;
+        text-align: center
+      }
+
+      .certificat-wrapper .b-container .info-content .bloc-name .right a span[data-v-8614d126] {
+        font-size: 20px !important
+      }
+
+      .certificat-wrapper .b-container .info-content .bloc-name .right .download-pdf[data-v-8614d126] {
+        margin: 0 auto
+      }
+
+      .certificat-wrapper .b-container .info-content .bloc-name .right .view-proofs[data-v-8614d126] {
+        margin: 16px auto 0
+      }
+
+      .certificat-wrapper .b-container .info-content .bloc-test[data-v-8614d126] {
+        width: 100%;
+        font-family: 'Open Sans';
+        font-size: 16px
+      }
+
+      .certificat-wrapper .b-container .info-content .bloc-test .label[data-v-8614d126] {
+        color: #003082;
+        width: 30%
+      }
+
+      .certificat-wrapper .b-container .info-content .bloc-score[data-v-8614d126] {
+        width: 100%;
+        font-family: 'Open Sans';
+        margin: 24px 0 0
+      }
+
+      .certificat-wrapper .b-container .info-content .bloc-score .label[data-v-8614d126] {
+        font-size: 16px
+      }
+
+      .certificat-wrapper .b-container .info-content .bloc-score .total[data-v-8614d126] {
+        font-family: 'Open Sans';
+      }
+
+      .certificat-wrapper .b-container .info-content .bloc-score .result[data-v-8614d126] {
+        font-size: 20px
+      }
+
+      .certificat-wrapper .b-container .info-content .bloc-mentions[data-v-8614d126] {
+        font-size: 14px
+      }
+    }
+
+    @media (max-width:768px) {
+      .certificat-wrapper[data-v-8614d126] {
+        width: 100%
+      }
+
+      .certificat-wrapper .b-container .header .top-bar[data-v-8614d126] {
+        position: fixed;
+        top: 0
+      }
+
+      .certificat-wrapper .b-container .header .header-content[data-v-8614d126] {
+        margin: 36px 0 0
+      }
+
+      .certificat-wrapper .b-container .info-content[data-v-8614d126] {
+        padding: 0 .5rem
+      }
+
+      .certificat-wrapper .b-container .info-content .bloc-name .right a[data-v-8614d126] {
+        width: 100%
+      }
+    }
+
+    @media (max-width:531px) {
+      .certificat-wrapper[data-v-8614d126] {
+        margin: 0
+      }
+
+      .certificat-wrapper .b-container .footer[data-v-8614d126] {
+        height: auto;
+        padding: 1rem 1rem 60px
+      }
+    }
+  </style>
+</head>
+
+<body class="open-sans-normal">
+  <div class="skipToContentLink"><a class="sr-only sr-only-focusable" href="#certificat">Aller au contenu principal</a>
+  </div>
+  <div class="certificat-main">
+    <div class="notificationArea"></div>
+    <div>
+      <div class="proof-drawer-ets closed-proofs">
+        <div class="proof-container-ets">
+          <div class="top-content">
+            <div class="title-proofs"><span class="semi"><img src="double-check.svg" alt="">
+                Score report information</span> <span class="close-proof-nav"><i class="ti-close"></i></span></div>
+            <section class="ps-container scroll-area-proofs ps" is="section">
+              <ul class="proof-list">
+                <li class="receptor"><img src="/avatar.svg" alt="">
+                  <div>
+                    Issued to<br> <span class="semi">Labbé Maxime</span></div>
+                </li>
+                <li class="proof-list"><img src="/issuer.svg" alt="">
+                  <div>
+                    Issued by<br> <span class="semi">ETS Global BV</span></div>
+                </li>
+                <li class="proof-list"><img src="/blockchain.svg" alt="">
+                  <div>
+                    Issuer verified by<br> <span class="semi">Blockchain Certified Data</span></div>
+                </li>
+                <li class="proof-list"><img src="/data.svg" alt="">
+                  <div class="semi">
+                    Data registered on the blockchain<br> <span>On 2024-07-31</span></div>
+                </li>
+                <li class="proof-list-data">
+                  The displayed information on this page reflects the information from the ETS Global data base.<br>
+                  ETS Global applies strict security measures to assure the fairness and validity of its assessments
+                  across its testing network, but should you have concerns about the validity of the information
+                  displayed on this page or if you need a secondary level of score verification please send the link of
+                  this score report to <a href="mailto:test-security@etsgIobal.org"
+                    target="_blank">test-security@etsglobal.org</a>.
+                </li>
+              </ul>
+              <div class="footer">
+                <div class="footer-btn"><a class="check-proof-button"
+                    href="https://www.bcdiploma.com/BCdiploma_x_ETS_Global" target="_blank"><i
+                      class="ti-info-alt"></i>&nbsp;About BCdiploma</a></div>
+                <div class="footer-top"><a href="https://www.bcdiploma.com" target="_blank"><img src="/bcdiploma.svg"
+                      alt="BCdiploma"></a> ©2024</div>
+                <div class="footer-links">
+                  Authorized by <a href="https://www.etsglobal.org" target="_blank"><img src="/logo-ets-global.svg"
+                      alt="ETS Global"></a></div>
+              </div>
+              <div class="ps__rail-x" style="left: 0px; bottom: 0px;">
+                <div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div>
+              </div>
+              <div class="ps__rail-y" style="top: 0px; right: 0px;">
+                <div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;"></div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="certificat" class="certificat ltr-lang">
+      <div data-v-6d3a06cd="" class="certificat-face certificat-face--front">
+        <section data-v-6d3a06cd="" class="ps-container inner-scroll ps" is="section"
+          style="overflow: auto !important;">
+          <div data-v-6d3a06cd="" class="certificat-wrapper certificat-wrapper--front">
+            <div data-v-6d3a06cd="" class="b-container">
+              <div data-v-6d3a06cd="" class="header">
+                <div data-v-6d3a06cd="" class="top-bar"><a data-v-6d3a06cd=""
+                    href="https://www.linkedin.com/company/ets-global/" target="_blank"><img data-v-6d3a06cd=""
+                      src="/linkedin.svg" alt="linkedin"></a> <a data-v-6d3a06cd=""
+                    href="https://www.facebook.com/TOEICTests/" target="_blank"><img data-v-6d3a06cd=""
+                      src="/facebook.svg" alt="facebook"></a> <a data-v-6d3a06cd="" href="https://twitter.com/ETSGlobal"
+                    target="_blank"><img data-v-6d3a06cd="" src="/twitter.svg" alt="twitter"></a></div>
+                <div data-v-6d3a06cd="" class="header-content"><a data-v-6d3a06cd="" href="https://www.etsglobal.org"
+                    target="_blank"><img data-v-6d3a06cd="" src="/logo-ets-toeic.svg" alt="ETS TOEIC"></a></div>
+              </div>
+              <div data-v-6d3a06cd="" class="info-content">
+                <div data-v-6d3a06cd="" class="welcome semi"><span data-v-6d3a06cd="" class="bold">Welcome to the TOEIC®
+                    Digital
+                    score
+                    page.</span><br data-v-6d3a06cd="">
+                  On this page, you can find the TOEIC® digital score report. This official document states the
+                  candidate’s personal information and score. A PDF version of this document can be downloaded and
+                  shared with score users worldwide. It includes a QR code confirming the candidate’s identity and the
+                  score validity.
+                </div>
+                <div data-v-6d3a06cd="" class="bloc-name">
+                  <div data-v-6d3a06cd="" class="left">
+                    <div data-v-6d3a06cd="" class="test-name bold">TOEIC® Listening and Reading Test - Public Programme
+                      Online</div>
+                    <div data-v-6d3a06cd="" class="laureat-name bold">Labbé Maxime</div>
+                    <div data-v-6d3a06cd="" class="birthdate semi">Date of birth: 2001/10/02</div>
+                  </div>
+                  <div data-v-6d3a06cd="" class="right"><a data-v-6d3a06cd="" href="#" class="download-pdf semi"><span
+                        data-v-6d3a06cd="" class="ti-download"></span> Download my digital score report</a> <a
+                      data-v-6d3a06cd="" href="#" class="view-proofs semi"><span data-v-6d3a06cd=""
+                        class="ti-check"></span>
+                      See score report information</a></div>
+                </div>
+                <div data-v-6d3a06cd="" class="bloc-test semi">
+                  <div data-v-6d3a06cd="" class="label">Test date </div>
+                  <div data-v-6d3a06cd="" class="result">2024/07/27</div>
+                  <div data-v-6d3a06cd="" class="border-b"></div>
+                  <div data-v-6d3a06cd="" class="label">Test centre </div>
+                  <div data-v-6d3a06cd="" class="result">ETS Global PARIS France, Metropolitan</div>
+                  <div data-v-6d3a06cd="" class="border-b"></div>
+                  <div data-v-6d3a06cd="" class="label">Valid until</div>
+                  <div data-v-6d3a06cd="" class="result">2026/07/27</div>
+                </div>
+                <div data-v-6d3a06cd="" class="bloc-score semi">
+                  <div data-v-6d3a06cd="" class="label total bold">Total score</div>
+                  <div data-v-6d3a06cd="" class="result"><span data-v-6d3a06cd="" class="bold">785</span> / 990</div>
+                  <div data-v-6d3a06cd="" class="border-b-2"></div>
+                  <div data-v-6d3a06cd="" class="label">Listening section</div>
+                  <div data-v-6d3a06cd="" class="result"><span data-v-6d3a06cd="" class="bold">410</span> / 495</div>
+                  <div data-v-6d3a06cd="" class="border-b"></div>
+                  <div data-v-6d3a06cd="" class="label">Reading section</div>
+                  <div data-v-6d3a06cd="" class="result"><span data-v-6d3a06cd="" class="bold">375</span> / 495</div>
+                </div>
+                <div data-v-6d3a06cd="" class="bloc-mentions semi">
+                  <p data-v-6d3a06cd="">This digital score report is valid for 2 years and recognised worldwide. ETS
+                    Global will confirm score results for 2 years after taking the test. After this period of time, ETS
+                    Global cannot guarantee English language proficiency of the test taker.</p>
+                  <p data-v-6d3a06cd="">The above information reflects the information in ETS Global’s data base. If you
+                    require a secondary level of score verification, please send the score report or the link of this
+                    page to <a data-v-6d3a06cd="" href="mailto:tests-security@etsglobal.org" class="link-blue"
+                      target="_blank">tests-security@etsglobal.org</a>.</p>
+                </div>
+              </div>
+              <div data-v-6d3a06cd="" class="footer semi">
+                <p data-v-6d3a06cd=""><a data-v-6d3a06cd="" href="https://www.etsglobal.org/global/en/legal-information"
+                    class="link-blue" target="_blank">Legal information</a><br data-v-6d3a06cd=""> Copyright © 2024 by
+                  ETS. All rights reserved. ETS, the ETS logo and TOEIC are registered trademarks of ETS in the United
+                  States and other countries.<br data-v-6d3a06cd="">
+                  All other trademarks are property of their respective owners.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="ps__rail-x" style="left: 0px; bottom: 0px;">
+            <div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div>
+          </div>
+          <div class="ps__rail-y" style="top: 0px; height: 879px; right: 0px;">
+            <div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;"></div>
+          </div>
+        </section>
+        <div data-v-6d3a06cd="" class="qr-code" id="qrcode"></div>
+      </div>
+    </div>
+  </div>
+  <div class="loading-pdf animated fadeIn pdf-loader hide-pdf">
+    <div class="txt-loader animated infinite pulse">Your file is being downloaded. Please wait.</div>
+    <div class="skype-loader">
+      <div class="dot">
+        <div class="first"></div>
+      </div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+  </div>
+  <script>
+
+    const proofDrawer = document.querySelector('.proof-drawer-ets');
+
+    const closeProofNav = document.querySelector('.close-proof-nav');
+    closeProofNav.addEventListener('click', function () {
+      proofDrawer.classList.remove('opened-proofs');
+      proofDrawer.classList.add('closed-proofs');
+    })
+
+    const viewProofsButton = document.querySelector('.view-proofs');
+
+    viewProofsButton.addEventListener('click', function () {
+      if (proofDrawer.classList.contains('closed-proofs')) {
+        proofDrawer.classList.remove('closed-proofs');
+        proofDrawer.classList.add('opened-proofs');
+      } else {
+        proofDrawer.classList.remove('opened-proofs');
+        proofDrawer.classList.add('closed-proofs');
+      }
+    });
+
+    const pdfLoader = document.querySelector('.pdf-loader')
+    const downloadPdfButton = document.querySelector('.download-pdf')
+
+    downloadPdfButton.addEventListener('click', () => {
+      pdfLoader.classList.remove('hide-pdf')
+      pdfLoader.classList.add('show-pdf')
+
+      setTimeout(() => {
+        pdfLoader.classList.remove('show-pdf')
+        pdfLoader.classList.add('hide-pdf')
+      }, 2000);
+    })
+
+  </script>
+</body>
+
+</html>
+
+</html>

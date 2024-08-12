@@ -4,8 +4,8 @@ const redirectUrl = 'https://www.etsglobal.org/fr/en'
 
 const currentPath = window.location.pathname
 
-if (!currentPath.includes('/fr/en/digital-score-report/')) {
+/* if (!currentPath.includes('/fr/en/digital-score-report/')) {
   window.location.href = redirectUrl;
-}
+} */
 
 const infos = atob(currentPath.split('/')[4].split('.')[1])

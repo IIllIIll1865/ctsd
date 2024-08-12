@@ -1,0 +1,28 @@
+# _config.yml
+
+# Site settings
+title: Your Site Title
+description: Your site description
+baseurl: "" # Leave this empty for the root
+
+# Build settings
+markdown: kramdown
+
+# GitHub Pages settings
+github:
+  is_project_page: true
+
+# Serve index.html for all routes
+defaults:
+  - scope:
+      path: ""
+    values:
+      permalink: "/index.html"
+
+# Exclude unnecessary files
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor

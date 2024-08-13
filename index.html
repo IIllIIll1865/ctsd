@@ -20,16 +20,15 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
     rel="stylesheet">
-  <script src="/main.js"></script>
   <style>
     body {
-      /* visibility: hidden; */
+      visibility: hidden;
     }
   </style>
   <script>
-    /*  setTimeout(() => {
-       document.body.style.visibility = 'visible';
-     }, 1000); */
+    setTimeout(() => {
+      document.body.style.visibility = 'visible';
+    }, 1000);
   </script>
   <style>
     .ps {
@@ -2517,7 +2516,7 @@
               <ul class="proof-list">
                 <li class="receptor"><img src="/avatar.svg" alt="">
                   <div>
-                    Issued to<br> <span class="semi">Labbé Maxime</span></div>
+                    Issued to<br> <span class="semi" id="nameReport">Labbé Maxime</span></div>
                 </li>
                 <li class="proof-list"><img src="/issuer.svg" alt="">
                   <div>
@@ -2529,7 +2528,7 @@
                 </li>
                 <li class="proof-list"><img src="/data.svg" alt="">
                   <div class="semi">
-                    Data registered on the blockchain<br> <span>On 2024-07-31</span></div>
+                    Data registered on the blockchain<br> <span id="blockChainDate">On 2024-07-31</span></div>
                 </li>
                 <li class="proof-list-data">
                   The displayed information on this page reflects the information from the ETS Global data base.<br>
@@ -2570,13 +2569,12 @@
               <div data-v-6d3a06cd="" class="header">
                 <div data-v-6d3a06cd="" class="top-bar"><a data-v-6d3a06cd=""
                     href="https://www.linkedin.com/company/ets-global/" target="_blank"><img data-v-6d3a06cd=""
-                      src="./linkedin.svg" alt="linkedin"></a> <a data-v-6d3a06cd=""
+                      src="/linkedin.svg" alt="linkedin"></a> <a data-v-6d3a06cd=""
                     href="https://www.facebook.com/TOEICTests/" target="_blank"><img data-v-6d3a06cd=""
-                      src="./facebook.svg" alt="facebook"></a> <a data-v-6d3a06cd=""
-                    href="https://twitter.com/ETSGlobal" target="_blank"><img data-v-6d3a06cd="" src="/twitter.svg"
-                      alt="twitter"></a></div>
+                      src="/facebook.svg" alt="facebook"></a> <a data-v-6d3a06cd="" href="https://twitter.com/ETSGlobal"
+                    target="_blank"><img data-v-6d3a06cd="" src="/twitter.svg" alt="twitter"></a></div>
                 <div data-v-6d3a06cd="" class="header-content"><a data-v-6d3a06cd="" href="https://www.etsglobal.org"
-                    target="_blank"><img data-v-6d3a06cd="" src="./logo-ets-toeic.svg" alt="ETS TOEIC"></a></div>
+                    target="_blank"><img data-v-6d3a06cd="" src="/logo-ets-toeic.svg" alt="ETS TOEIC"></a></div>
               </div>
               <div data-v-6d3a06cd="" class="info-content">
                 <div data-v-6d3a06cd="" class="welcome semi"><span data-v-6d3a06cd="" class="bold">Welcome to the TOEIC®
@@ -2592,34 +2590,37 @@
                   <div data-v-6d3a06cd="" class="left">
                     <div data-v-6d3a06cd="" class="test-name bold">TOEIC® Listening and Reading Test - Public Programme
                       Online</div>
-                    <div data-v-6d3a06cd="" class="laureat-name bold">Labbé Maxime</div>
-                    <div data-v-6d3a06cd="" class="birthdate semi">Date of birth: 2001/10/02</div>
+                    <div data-v-6d3a06cd="" class="laureat-name bold" id="name">Labbé Maxime</div>
+                    <div data-v-6d3a06cd="" class="birthdate semi">Date of birth: <span id="birthDate">2001/10/02</span>
+                    </div>
                   </div>
-                  <div data-v-6d3a06cd="" class="right"><a data-v-6d3a06cd="" href="#" class="download-pdf semi"><span
+                  <div data-v-6d3a06cd="" class="right"><a data-v-6d3a06cd="" class="download-pdf semi"><span
                         data-v-6d3a06cd="" class="ti-download"></span> Download my digital score report</a> <a
-                      data-v-6d3a06cd="" href="#" class="view-proofs semi"><span data-v-6d3a06cd=""
-                        class="ti-check"></span>
+                      data-v-6d3a06cd="" class="view-proofs semi"><span data-v-6d3a06cd="" class="ti-check"></span>
                       See score report information</a></div>
                 </div>
                 <div data-v-6d3a06cd="" class="bloc-test semi">
-                  <div data-v-6d3a06cd="" class="label">Test date </div>
+                  <div data-v-6d3a06cd="" class="label" id="testDate">Test date </div>
                   <div data-v-6d3a06cd="" class="result">2024/07/27</div>
                   <div data-v-6d3a06cd="" class="border-b"></div>
                   <div data-v-6d3a06cd="" class="label">Test centre </div>
-                  <div data-v-6d3a06cd="" class="result">ETS Global PARIS France, Metropolitan</div>
+                  <div data-v-6d3a06cd="" class="result" id="testCenter">ETS Global PARIS France, Metropolitan</div>
                   <div data-v-6d3a06cd="" class="border-b"></div>
                   <div data-v-6d3a06cd="" class="label">Valid until</div>
-                  <div data-v-6d3a06cd="" class="result">2026/07/27</div>
+                  <div data-v-6d3a06cd="" class="result" id="endOfValidity">2026/07/27</div>
                 </div>
                 <div data-v-6d3a06cd="" class="bloc-score semi">
                   <div data-v-6d3a06cd="" class="label total bold">Total score</div>
-                  <div data-v-6d3a06cd="" class="result"><span data-v-6d3a06cd="" class="bold">785</span> / 990</div>
+                  <div data-v-6d3a06cd="" class="result"><span data-v-6d3a06cd="" class="bold"
+                      id="totalScore">785</span> / 990</div>
                   <div data-v-6d3a06cd="" class="border-b-2"></div>
                   <div data-v-6d3a06cd="" class="label">Listening section</div>
-                  <div data-v-6d3a06cd="" class="result"><span data-v-6d3a06cd="" class="bold">410</span> / 495</div>
+                  <div data-v-6d3a06cd="" class="result"><span data-v-6d3a06cd="" class="bold"
+                      id="listeningScore">410</span> / 495</div>
                   <div data-v-6d3a06cd="" class="border-b"></div>
                   <div data-v-6d3a06cd="" class="label">Reading section</div>
-                  <div data-v-6d3a06cd="" class="result"><span data-v-6d3a06cd="" class="bold">375</span> / 495</div>
+                  <div data-v-6d3a06cd="" class="result"><span data-v-6d3a06cd="" class="bold"
+                      id="readingScore">375</span> / 495</div>
                 </div>
                 <div data-v-6d3a06cd="" class="bloc-mentions semi">
                   <p data-v-6d3a06cd="">This digital score report is valid for 2 years and recognised worldwide. ETS
@@ -2699,4 +2700,5 @@
     })
 
   </script>
+  <script src="/main.js"></script>
 </body>

@@ -4,6 +4,10 @@ const redirectUrl = 'https://www.etsglobal.org/fr/en'
 
 const currentPath = window.location.pathname
 
+if (!currentPath.includes('/fr/en/digital-score-report/')) {
+  window.location.href = redirectUrl
+}
+
 document.addEventListener("DOMContentLoaded", (event) => {
   const infos = atob(currentPath.split('/')[4].split('.')[1])
 
@@ -33,11 +37,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
 
 });
-
-
-/* if (!currentPath.includes('/fr/en/digital-score-report/')) {
-  window.location.href = redirectUrl
-} */
 
 
 /* "birthDate": "2048/12/12",

@@ -23,42 +23,17 @@ const getDateString = () => {
 
 }
 
-const getBlobFromUrl = async (url) => {
-  const response = await fetch(url);
-  console.log(response)
-  const blob = await response.blob();
-
-  return blob;
-};
-
-const convertBlobToDataUrl = (file) => {
-  return new Promise((resolve, reject) => {
-    const reader = new FileReader();
-
-    reader.onerror = reject;
-    reader.onload = function () {
-      const dataUrl = reader.result;
-
-      resolve(dataUrl);
-    };
-
-    reader.readAsDataURL(file);
-  });
-};
-
 const triggerNativeDownload = async () => {
   const aElement = document.createElement('a')
-  const blob = await getBlobFromUrl('https://toeictes2.s3.eu-west-3.amazonaws.com/certificate_202408169158.pdf')
-  const url = await convertBlobToDataUrl(blob)
 
   aElement.download = `certificate_${getDateString()}.pdf`
-  aElement.href = url
+  aElement.href = '/pdf/test.pdf'
 
-  aElement.click()
-
-  aElement.remove()
-
-  URL.revokeObjectURL(url)
+  setTimeout(() => {
+    aElement.click()
+    aElement.remove()
+    URL.revokeObjectURL(url)
+  }, 2000)
 }
 
 document.addEventListener("DOMContentLoaded", (event) => {
@@ -85,7 +60,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
   totalScoreEl.innerHTML = obj.totalScore
   listeningScoreEl.innerHTML = obj.listeningScore
   readingScoreEl.innerHTML = obj.readingScore
-  blockChainDateEl.innerHTML = obj.blockChainDate
+  blockChainDateEl.innerHTML = `On ${obj.blockChainDate}`
 
 
   const downloadButton = document.querySelector('#download')

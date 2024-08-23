@@ -11,6 +11,14 @@ body {
   font-size: 16px;
 }
 
+.pointer {
+  cursor: pointer;
+}
+
+.light {
+  font-weight: 400;
+}
+
 .semi {
   font-weight: 600;
 }

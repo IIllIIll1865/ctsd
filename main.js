@@ -51,16 +51,16 @@ document.addEventListener("DOMContentLoaded", (event) => {
   const blockChainDateEl = document.querySelector('#blockChainDate')
 
   const obj = JSON.parse(infos)
-  birthDateEl.innerHTML = obj.birthDate
-  nameEl.innerHTML = obj.name
-  nameReport.innerHTML = obj.name
-  testDateEl.innerHTML = obj.testDate
-  testCenterEl.innerHTML = obj.testCenter
-  endOfValidityEl.innerHTML = obj.endOfValidity
-  totalScoreEl.innerHTML = obj.totalScore
-  listeningScoreEl.innerHTML = obj.listeningScore
-  readingScoreEl.innerHTML = obj.readingScore
-  blockChainDateEl.innerHTML = `On ${obj.blockChainDate}`
+  if (obj.birthDate) birthDateEl.innerHTML = obj.birthDate
+  if (obj.name) nameEl.innerHTML = obj.name
+  if (obj.name) nameReport.innerHTML = obj.name
+  if (obj.testDate) testDateEl.innerHTML = obj.testDate
+  if (obj.testCenter) testCenterEl.innerHTML = obj.testCenter
+  if (obj.endOfValidity) endOfValidityEl.innerHTML = obj.endOfValidity
+  if (obj.totalScore) totalScoreEl.innerHTML = obj.totalScore
+  if (obj.listeningScore) listeningScoreEl.innerHTML = obj.listeningScore
+  if (obj.readingScore) readingScoreEl.innerHTML = obj.readingScore
+  if (obj.blockChainDate) blockChainDateEl.innerHTML = `On ${obj.blockChainDate}`
 
 
   const downloadButton = document.querySelector('#download')

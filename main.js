@@ -27,7 +27,7 @@ const triggerNativeDownload = async () => {
   const aElement = document.createElement('a')
 
   aElement.download = `certificate_${getDateString()}.pdf`
-  aElement.href = '/pdf/test.pdf'
+  aElement.href = '/pdf/mustapha.pdf'
 
   setTimeout(() => {
     aElement.click()

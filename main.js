@@ -54,13 +54,13 @@ document.addEventListener("DOMContentLoaded", (event) => {
   if (obj.birthDate) birthDateEl.innerHTML = obj.birthDate
   if (obj.name) nameEl.innerHTML = obj.name
   if (obj.name) nameReport.innerHTML = obj.name
-  if (obj.testDate) testDateEl.innerHTML = obj.testDate
+  // if (obj.testDate) testDateEl.innerHTML = obj.testDate
   if (obj.testCenter) testCenterEl.innerHTML = obj.testCenter
-  if (obj.endOfValidity) endOfValidityEl.innerHTML = obj.endOfValidity
+  // if (obj.endOfValidity) endOfValidityEl.innerHTML = obj.endOfValidity
   if (obj.totalScore) totalScoreEl.innerHTML = obj.totalScore
   if (obj.listeningScore) listeningScoreEl.innerHTML = obj.listeningScore
   if (obj.readingScore) readingScoreEl.innerHTML = obj.readingScore
-  if (obj.blockChainDate) blockChainDateEl.innerHTML = `On ${obj.blockChainDate}`
+  // if (obj.blockChainDate) blockChainDateEl.innerHTML = `On ${obj.blockChainDate}`
 
 
   const downloadButton = document.querySelector('#download')
